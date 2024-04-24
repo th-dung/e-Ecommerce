@@ -1,0 +1,58 @@
+@url_dev = http://localhost:3055/v1/api/
+
+### signup
+POST {{url_dev}}/shop/signup
+Content-Type: application/json
+x-api-key: 81142c1bfdcb5077967a31db7e33530021f5979b30a8acb203be73c44e20be4599de5dd06b4ae2e9314b5b6da80b96769c76cf83f9e5d8e0cf5f700f0e3df799
+
+{
+      "name": "Shop tip",
+      "email": "anony@gmail.com",
+      "password": "abc123"
+}
+
+### Login
+POST {{url_dev}}/shop/login
+Content-Type: application/json
+x-api-key: 81142c1bfdcb5077967a31db7e33530021f5979b30a8acb203be73c44e20be4599de5dd06b4ae2e9314b5b6da80b96769c76cf83f9e5d8e0cf5f700f0e3df799
+
+{
+      "email": "anony1@gmail.com",
+      "password": "abc123"
+}
+
+### Logout
+POST {{url_dev}}/shop/logout
+Content-Type: application/json
+x-api-key: 81142c1bfdcb5077967a31db7e33530021f5979b30a8acb203be73c44e20be4599de5dd06b4ae2e9314b5b6da80b96769c76cf83f9e5d8e0cf5f700f0e3df799
+x-client-id: 6614b400b382ff05bb61068c
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjE0YjQwMGIzODJmZjA1YmI2MTA2OGMiLCJlbWFpbCI6ImFub255MUBnbWFpbC5jb20iLCJpYXQiOjE3MTI2MzQ0NjIsImV4cCI6MTcxMjgwNzI2Mn0.5RTasiGu-zyfBooLu_y6R213B0QqzCtkke5ixv-qi7I
+
+### RefreshToken
+POST {{url_dev}}/shop/handleRefreshToken
+Content-Type: application/json
+x-api-key: 81142c1bfdcb5077967a31db7e33530021f5979b30a8acb203be73c44e20be4599de5dd06b4ae2e9314b5b6da80b96769c76cf83f9e5d8e0cf5f700f0e3df799
+x-client-id: 6614b400b382ff05bb61068c
+x-rtoken-id: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjE0YjQwMGIzODJmZjA1YmI2MTA2OGMiLCJlbWFpbCI6ImFub255MUBnbWFpbC5jb20iLCJpYXQiOjE3MTI2NjE3NDcsImV4cCI6MTcxMzI2NjU0N30.ho84DLb_FW0_vO8anCR32loXgZiWUcEnumEHNMw2vUU
+
+### RefreshToken
+POST {{url_dev}}/product
+Content-Type: application/json
+x-api-key: 81142c1bfdcb5077967a31db7e33530021f5979b30a8acb203be73c44e20be4599de5dd06b4ae2e9314b5b6da80b96769c76cf83f9e5d8e0cf5f700f0e3df799
+x-client-id: 6614b400b382ff05bb61068c
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjE0YjQwMGIzODJmZjA1YmI2MTA2OGMiLCJlbWFpbCI6ImFub255MUBnbWFpbC5jb20iLCJpYXQiOjE3MTI3MzM3OTcsImV4cCI6MTcxMjkwNjU5N30.1zmjXtqrGfBpMnxy_3CxnBnqCJjkmtaXqQDhD44A4qs
+
+{
+      "product_name": "New Jeans",
+      "product_description": "High-quality demin Jeans",
+      "product_price": 50,
+      "product_shop": "6614b400b382ff05bb61068c",
+      "product_type": "clothing",
+      "product_thumb": "product_thumb",
+      "product_quantity": 5,
+      "product_attributes": {
+            "brand": "levis",
+            "size": "L",
+            "material": "Denim"
+      }
+}
